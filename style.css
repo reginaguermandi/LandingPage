@@ -1,0 +1,46 @@
+.nav-bar {
+    background: url('./images/mobile/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.logo {
+    width: 8em;
+}
+
+.menu-icon{
+    width: 1.7em;
+    height: 1em;
+}
+
+.nav-links{
+    display: none;
+}
+
+.hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45% 7%;
+    border: 1px solid hsl(0, 0%, 100%);
+
+    color: hsl(0, 0%, 100%);   
+}
+
+.hero-text h1 {
+    padding: .8em;
+    font-size: 2.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+
+
