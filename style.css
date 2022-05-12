@@ -1,7 +1,8 @@
 header {
-    background-image: url('./images/desktop/image-hero.jpg');
-    background-size: cover;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)), url('./images/desktop/image-hero.jpg') no-repeat center / cover;
+
 }
 
 .nav-content {
@@ -13,7 +14,7 @@ header {
 
 .logo {
     width: 10em;
-    padding-right: 10em;
+
 }
 
 .menu-icon {
@@ -22,6 +23,7 @@ header {
 
 .nav-links li {
     display: inline-flex;
+    flex-direction: column;
     padding: 1em;
 
     color: #fff;
@@ -30,8 +32,8 @@ header {
 }
 
 .hero-text {
-    max-width: 32em;
-    margin: 10% 12% 10% 12%;
+    max-width: 40em;
+    margin: 15% 15% 10% 15%;
 
     border: 2px solid hsl(0, 0%, 100%);
 
@@ -40,7 +42,44 @@ header {
 
 .hero-text h1 {
     padding: 1em;
-    font-size: 3em;
+    font-size: 4em;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
+}
+
+@media (min-width:375px) and (max-width:468px) {
+    header {
+        width: 100vw;
+        height: 100vh;
+        background: url('./images/mobile/image-hero.jpg') no-repeat center / cover;
+
+    }
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1.2em;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+
+    }
+
+    .hero-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 55% 5%;
+    }
+
+    .hero-text h1 {
+        padding: 1em;
+        font-size: 2.5em;
+    }
+
 }
