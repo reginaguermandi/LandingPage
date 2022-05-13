@@ -1,3 +1,4 @@
+/* HERO BANNER */
 header {
     width: 100vw;
     height: 100vh;
@@ -17,18 +18,45 @@ header {
 
 }
 
-.menu-icon {
+#menu {
     display: none;
 }
 
-.nav-links li {
+.close {
+    display: none;
+}
+
+#menu-links li {
     display: inline-flex;
     flex-direction: column;
     padding: 1em;
 
     color: #fff;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 400;
+}
+
+a {
+    position: relative;
+}
+
+a::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    transform: scaleX(0.2);
+    transform-origin: center;
+
+    background-color: hsl(0, 0%, 80%);
+}
+
+a:hover::after {
+    width: 100%;
+    transform: scaleX(0.5);
 }
 
 .hero-text {
@@ -43,9 +71,13 @@ header {
 .hero-text h1 {
     padding: 1em;
     font-size: 4em;
+    font-weight: 200;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
 }
+
+/* SECTION CONTENT */
+
 
 @media (min-width:375px) and (max-width:468px) {
     header {
@@ -61,12 +93,44 @@ header {
         margin: 0 1.2em;
     }
 
-    .nav-links {
-        display: none;
+    .logo {
+        width: 10em;
+        padding-left: .5em;
+        z-index: 2;
+
     }
 
-    .menu-icon {
+    /*quando clicar no menu-icon, close-icon e nav-links mudam para display: block */
+    #menu {
         display: block;
+    }
+
+    .close {
+        display: none;
+        z-index: 2;
+    }
+
+    #menu-links {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: left;
+        padding-top: 10em;
+        line-height: 1em;
+        width: 100%;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 200;
+        letter-spacing: .1em;
+
+        background-color: #000;
+    }
+
+    #menu-links.active {
+        display: flex;
 
     }
 
@@ -80,6 +144,7 @@ header {
     .hero-text h1 {
         padding: 1em;
         font-size: 2.5em;
+
     }
 
 }
