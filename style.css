@@ -119,7 +119,7 @@ a:hover::after {
 
 
 
-@media (min-width:375px) and (max-width:600px) {
+@media (min-width:360px) and (max-width:600px) {
     header {
         width: 100vw;
         height: 100vh;
