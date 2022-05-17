@@ -41,11 +41,11 @@ header {
     font-weight: 400;
 }
 
-a {
+#menu-links a {
     position: relative;
 }
 
-a::after {
+#menu-links a::after {
     content: " ";
     position: absolute;
     height: 2px;
@@ -59,7 +59,7 @@ a::after {
     background-color: hsl(0, 0%, 80%);
 }
 
-a:hover::after {
+#menu-links a:hover::after {
     width: 100%;
     transform: scaleX(0.5);
 }
@@ -152,6 +152,38 @@ a:hover::after {
     border: 1px solid hsl(0, 0%, 0%);
     color: hsl(0, 0%, 0%);
     background: hsl(0, 0%, 100%);
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+}
+
+.card-item {
+    position: relative;
+    width: 15em;
+    height: 28em;
+    background-color: aquamarine;
+}
+
+.cards img {
+    background: #fff;
+}
+
+.card-item p {
+    position: absolute;
+    bottom: 1em;
+    padding: 0 1.5em;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    color: hsl(0, 0%, 0%);
 }
 
 
@@ -268,8 +300,7 @@ a:hover::after {
 
     /* CARD SECTION */
     .card-container {
-        display: block;
-        margin: 2em auto;
+        margin: 0 auto;
     }
 
     .creations-btn button {
@@ -277,10 +308,9 @@ a:hover::after {
     }
 
     .creations-btn h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
+        display: block;
+        margin: 0 auto;
+        font-size: 1.8em;
     }
 
 
