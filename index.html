@@ -21,6 +21,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      color: hsl(0, 0%, 55%);
     }
 
     .attribution a {
@@ -70,8 +71,10 @@
     </section>
 
     <article class="card-container">
-      <div class="creations-btn">
+      <div class="creations">
         <h2>Our creations</h2>
+      </div>
+      <div class="btn">
         <button>See all</button>
       </div>
 
@@ -80,9 +83,11 @@
           <p>Deep<br> earth</p>
         </div>
 
+
         <div class="card-2">
           <p>Night<br> arcade</p>
         </div>
+
 
         <div class="card-3">
           <p>Soccer<br> team VR</p>
@@ -112,27 +117,38 @@
   </main>
 
   <footer>
-    <figure>
-      <img src="./images/logo.svg" alt="Loopstudios logo">
-      <img src="./images/icon-facebook.svg" alt="icon facebook">
-      <img src="./images/icon-twitter.svg" alt="icon twitter">
-      <img src="./images/icon-pinterest.svg" alt="icon pinterest">
-      <img src="./images/icon-instagram.svg" alt="icon instagram">
-    </figure>
-    <ul>
-      <li>About</li>
-      <li>Careers</li>
-      <li>Events</li>
-      <li>Products</li>
-      <li>Support</li>
-    </ul>
-    <p>© 2021 Loopstudios. All rights reserved.</p>
+    <div class="footer-container">
+      <div class="contact-logo">
+        <img class="logo" src="./images/logo.svg" alt="Loopstudios logo">
+      </div>
+      <div class="social-icons">
+        <figure>
+          <a href="#"><img src="./images/icon-facebook.svg" alt="icon facebook"></a>
+          <a href="#"><img src="./images/icon-twitter.svg" alt="icon twitter"></a>
+          <a href="#"><img src="./images/icon-pinterest.svg" alt="icon pinterest"></a>
+          <a href="#"><img src="./images/icon-instagram.svg" alt="icon instagram"></a>
+        </figure>
+      </div>
+      <div class="info-links">
+        <ul>
+          <li><a href="#">About</li></a>
+          <li><a href="#">Careers</li></a>
+          <li><a href="#">Events</li></a>
+          <li><a href="#">Products</li></a>
+          <li><a href="#">Support</li></a>
+        </ul>
+      </div>
+      <div class="rights">
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/reginaguermandi">Regina G. Nascimento</a>.
+    </div>
   </footer>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
 
   <script src="./script.js"></script>
 </body>

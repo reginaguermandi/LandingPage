@@ -1,5 +1,6 @@
 .nav-bar,
-.main-content {
+.main-content,
+.footer-container {
     width: 70%;
     display: block;
     margin: 0 auto;
@@ -7,7 +8,7 @@
 
 /* HERO BANNER */
 header {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.411)), url('./images/desktop/image-hero.jpg') no-repeat center / cover;
 }
@@ -21,6 +22,7 @@ header {
 
 .logo {
     width: 10em;
+    cursor: pointer;
 }
 
 #menu {
@@ -41,11 +43,11 @@ header {
     font-weight: 400;
 }
 
-#menu-links a {
+a {
     position: relative;
 }
 
-#menu-links a::after {
+a::after {
     content: " ";
     position: absolute;
     height: 2px;
@@ -59,7 +61,7 @@ header {
     background-color: hsl(0, 0%, 80%);
 }
 
-#menu-links a:hover::after {
+a:hover::after {
     width: 100%;
     transform: scaleX(0.5);
 }
@@ -124,20 +126,23 @@ header {
 /* CARD SECTION */
 
 .creations-btn {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 5em 0;
 }
 
-.creations-btn h2 {
+.creations h2 {
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 2.5em;
 }
 
-.creations-btn button {
+.btn {
+    position: absolute;
+    right: 0;
+
+}
+
+.btn button {
     padding: .7em 2.5em;
     border: none;
     text-transform: uppercase;
@@ -149,7 +154,7 @@ header {
     background-color: hsl(0, 0%, 100%);
 }
 
-.creations-btn button:hover {
+.btn button:hover {
 
     color: hsl(0, 0%, 100%);
     background: hsl(0, 0%, 0%);
@@ -162,7 +167,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     justify-items: center;
-
+    margin-top: 3em;
 }
 
 .card-1,
@@ -176,8 +181,24 @@ header {
     position: relative;
     width: 100%;
     height: 28em;
-
+    cursor: pointer;
 }
+
+.card-1:hover {
+    opacity: .8;
+}
+
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover,
+.card-5:hover,
+.card-6:hover,
+.card-7:hover,
+.card-8:hover {
+    opacity: .8;
+}
+
 
 .card-1 p,
 .card-2 p,
@@ -227,6 +248,52 @@ header {
 
 .card-8 {
     background: linear-gradient(0deg, rgba(2, 0, 36, 0.7455357142857143) 0%, rgba(1, 1, 10, 0) 35%, rgba(255, 255, 255, 0) 100%), url("./images/desktop/image-fisheye.jpg") no-repeat center / cover;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+.footer-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+}
+
+.info-links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 1em 0;
+}
+
+.social-icons {
+    position: absolute;
+    right: 0;
+}
+
+.social-icons img {
+    width: 1em;
+    padding: .2em;
+}
+
+.info-links li {
+    display: inline-flex;
+    padding: 1em 1em 0 0;
+}
+
+.rights {
+    position: absolute;
+    right: 0;
+    bottom: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 0%, 55%);
 }
 
 
@@ -340,7 +407,7 @@ header {
     }
 
     .text-vr p {
-        padding: 3em;
+        padding: 1.5em;
         font-size: 1em;
         line-height: 2em;
         font-weight: 400;
@@ -349,17 +416,27 @@ header {
 
     /* CARD SECTION */
     .card-container {
-        margin: 0 auto;
+        margin: 3em auto;
     }
 
-    .creations-btn button {
-        display: none;
+    .creations,
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0;
     }
 
-    .creations-btn h2 {
+    .btn {
+        position: static;
+        order: 3;
+    }
+
+    .creations h2 {
         display: block;
         margin: 0 auto;
         font-size: 1.8em;
+        order: 1;
     }
 
     /* CARDS */
@@ -371,7 +448,6 @@ header {
     .card-6,
     .card-7,
     .card-8 {
-
         width: 20em;
         height: 8em;
     }
@@ -384,7 +460,6 @@ header {
     .card-6 p,
     .card-7 p,
     .card-8 p {
-
         bottom: 0;
         padding: .5em;
         font-size: 2em;
@@ -395,7 +470,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        order: 2;
         overflow: hidden;
     }
 
@@ -432,5 +507,38 @@ header {
         background: linear-gradient(90deg, rgba(2, 0, 36, 0.7455357142857143) 0%, rgba(1, 1, 10, 0) 35%, rgba(240, 240, 240, 0) 100%), url("./images/mobile/image-fisheye.jpg") no-repeat center / cover;
     }
 
+    /* FOOTER*/
 
+    .contact-logo,
+    .social-icons,
+    .rights {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-links {
+        flex-direction: column;
+        order: 2;
+    }
+
+    .social-icons {
+        position: static;
+        order: 3;
+    }
+
+    .rights {
+        position: static;
+        margin-top: 1em;
+        font-size: .8em;
+        order: 4;
+    }
+
+    .info-links li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
 }
