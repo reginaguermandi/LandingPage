@@ -184,10 +184,6 @@ a:hover::after {
     cursor: pointer;
 }
 
-.card-1:hover {
-    opacity: .8;
-}
-
 .card-1:hover,
 .card-2:hover,
 .card-3:hover,
@@ -198,7 +194,6 @@ a:hover::after {
 .card-8:hover {
     opacity: .8;
 }
-
 
 .card-1 p,
 .card-2 p,
@@ -473,7 +468,6 @@ footer {
         order: 2;
         overflow: hidden;
     }
-
 
     .card-1 {
         background: linear-gradient(90deg, rgba(2, 0, 36, 0.7455357142857143) 0%, rgba(1, 1, 10, 0) 35%, rgba(240, 240, 240, 0) 100%), url("./images/mobile/image-deep-earth.jpg") no-repeat center / cover;
